@@ -1,0 +1,79 @@
+//Base Styles
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+body {
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+//variables
+$text_color: #ffffff;
+
+//Main Styles
+
+.header {
+    height: 100vh;
+    width: 100vw;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/gifs/macbook.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: $text_color;
+    margin-bottom: 6rem;
+
+    &__logo-nav-container {
+        display: flex;
+        justify-content: space-around;
+        height: 4rem;
+        align-items: center;
+
+        &--navWrapper {
+            
+            &-nav {
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        display: inline-block;
+                        margin-right: 3rem;
+                        font-size: 1.2rem;
+
+                        a {
+                            color: $text_color;
+                            text-decoration: none;
+                        }
+
+
+                        &:nth-child(1) {
+                            border-bottom: .2rem outset $text_color;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__heading {
+        
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        &__logo-nav-container {
+            display: block;
+        }
+    }
+}
+
