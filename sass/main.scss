@@ -29,12 +29,14 @@ $text_color: #ffffff;
     background-attachment: fixed;
     color: $text_color;
     margin-bottom: 6rem;
+    position: relative;
 
     &__logo-nav-container {
         display: flex;
         justify-content: space-around;
         height: 4rem;
         align-items: center;
+        padding-top: 2rem;
 
         &--navWrapper {
             
@@ -65,7 +67,61 @@ $text_color: #ffffff;
     }
 
     &__heading {
-        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60%, -50%);
+    }
+
+    &__bottom-content {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100vw;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &--attribute1 {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: .1rem;
+                height: 4.2rem;
+                left: 18rem;
+                bottom: 1rem;
+                background-color: $text_color;
+            }
+        }
+        &--attribute2 {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: .1rem;
+                height: 4.2rem;
+                left: 20rem;
+                bottom: .6rem;
+                background-color: $text_color;
+            }
+        }
+        &--attribute3 {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: .1rem;
+                height: 4.2rem;
+                left: 18rem;
+                bottom: 1rem;
+                background-color: $text_color;
+            }
+        }
     }
 }
 

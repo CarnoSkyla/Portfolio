@@ -19,12 +19,14 @@ html {
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  position: relative; }
   .header__logo-nav-container {
     display: flex;
     justify-content: space-around;
     height: 4rem;
-    align-items: center; }
+    align-items: center;
+    padding-top: 2rem; }
     .header__logo-nav-container--navWrapper-nav ul {
       list-style: none; }
       .header__logo-nav-container--navWrapper-nav ul li {
@@ -37,6 +39,50 @@ html {
         .header__logo-nav-container--navWrapper-nav ul li:nth-child(1) {
           border-bottom: 0.2rem outset #ffffff;
           font-weight: bold; }
+  .header__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%); }
+  .header__bottom-content {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .header__bottom-content--attribute1 {
+      position: relative; }
+      .header__bottom-content--attribute1::after {
+        position: absolute;
+        content: '';
+        width: .1rem;
+        height: 4.2rem;
+        left: 18rem;
+        bottom: 1rem;
+        background-color: #ffffff; }
+    .header__bottom-content--attribute2 {
+      position: relative; }
+      .header__bottom-content--attribute2::after {
+        position: absolute;
+        content: '';
+        width: .1rem;
+        height: 4.2rem;
+        left: 20rem;
+        bottom: .6rem;
+        background-color: #ffffff; }
+    .header__bottom-content--attribute3 {
+      position: relative; }
+      .header__bottom-content--attribute3::after {
+        position: absolute;
+        content: '';
+        width: .1rem;
+        height: 4.2rem;
+        left: 18rem;
+        bottom: 1rem;
+        background-color: #ffffff; }
 
 @media screen and (max-width: 480px) {
   .header__logo-nav-container {
