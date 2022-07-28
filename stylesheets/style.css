@@ -71,24 +71,48 @@ html {
     .header__bottom-content--attribute1 {
       position: relative;
       border-left: 0.1rem outset #ff0000;
-      border-bottom: 0.2rem outset #ffcc00;
+      box-shadow: -0.3rem 0.2rem #ff0000;
       padding: 3rem; }
     .header__bottom-content--attribute2 {
       position: relative;
-      border-bottom: 0.2rem outset #ffcc00;
+      border-bottom: .2rem outset orange;
       padding: 3rem; }
     .header__bottom-content--attribute3 {
       position: relative;
-      border-bottom: 0.2rem outset #ffcc00;
-      border-right: 0.1rem outset #ff0000;
+      border-right: 0.1rem outset #ffcc00;
       box-shadow: 0.3rem 0.2rem #ffcc00;
       padding: 3rem; }
 
-.main__about-section {
-  position: relative; }
-  .main__about-section__content {
-    display: flex;
-    justify-content: center; }
+.main__about-section__content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 6rem; }
+  .main__about-section__content--image-container {
+    border-left: 0.2rem outset #ffcc00;
+    box-shadow: -0.3rem 0.2rem #ff0000;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    position: relative; }
+    .main__about-section__content--image-container::after {
+      content: "";
+      position: absolute;
+      height: 50%;
+      width: 4rem; }
+  .main__about-section__content--content-container {
+    padding-left: 3rem;
+    border-right: 0.1rem outset #ffcc00;
+    box-shadow: 0.3rem 0.2rem #ff0000;
+    padding: 2rem 3rem;
+    background-color: #ffcc00; }
+
+.main__services-section {
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/gifs/macbook.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  margin-bottom: 6rem; }
 
 @media screen and (max-width: 480px) {
   .header__logo-nav-container {
