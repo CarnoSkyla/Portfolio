@@ -167,13 +167,53 @@ $tertiary-text_color: #ffcc00;
     }
 
     &__services-section {
-        height: 100vh;
         width: 100vw;
         background: -webkit-linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/gifs/macbook.jpg);
         background-size: cover;
         background-attachment: fixed;
         color: $text_color;
         margin-bottom: 6rem;
+        position: relative;
+        padding: .2rem 0;
+
+        &__content {
+            &--headingWrapper {
+                text-align: center;
+
+                h2 {
+                    font-size: 30px;
+                    display: inline-block;
+                    margin-top: 1rem;
+                    padding-top: 1rem;
+                }
+            }
+
+            &--servicesWrapper {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 6rem;
+                text-align: center;
+                
+                &-service1 {
+                    border-left: .1rem outset $secondary-text_color;
+                    box-shadow: -.3rem .2rem $secondary-text_color;
+                    padding: 3rem;
+                }
+
+                &-service2 {
+                    position: relative;
+                    border-bottom: .2rem outset orange;
+                    padding: 3rem;
+                }
+
+                &-service3 {
+                    position: relative;
+                    border-right: .1rem outset $tertiary-text_color;
+                    box-shadow: .3rem .2rem $tertiary-text_color;
+                    padding: 3rem;
+                }
+            }
+        }
     }
 }
 
